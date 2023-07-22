@@ -9,6 +9,9 @@ import CollageDetails from './Components/CollegeDetails/CollageDetails.jsx';
 import Home from './Components/Home/Home.jsx';
 import Header from './Components/Header/Header.jsx';
 import MoreCollege from './Components/moreCollege/MoreCollege.jsx';
+import SubCollageTag from './Components/subCollageTag/SubCollageTag.jsx';
+import Admission from './Components/Admission/Admission.jsx';
+import AdmissionCollage from './Components/AdmissionCollage/AdmissionCollage.jsx';
 
 
 
@@ -30,6 +33,20 @@ const router = createBrowserRouter([
       {
         path:'college',
         element:<MoreCollege></MoreCollege>
+      },
+      {
+        path:'/subCollege/:id',
+        element:<SubCollageTag></SubCollageTag>,
+        loader:({params})=>  fetch(`http://localhost:5000/subCollege/${params.id}`)
+      },
+      {
+        path:'admission',
+        element:<Admission></Admission>,
+      },
+      {
+        path:'/collegeID/:id',
+        element:<AdmissionCollage></AdmissionCollage>,
+        loader:({params}) => fetch(`http://localhost:5000/subCollege/${params.id}`)
       }
     ]
   },
