@@ -37,7 +37,7 @@ const ImgGallery = () => {
       
 
     return (
-        <div className='w-[50%] mx-auto my-10'>
+        <div className='lg:w-[50%] mx-auto my-10'>
             <h1 className='text-2xl text-center my-5'>College graduate's group pictures.</h1>
             <hr className='border-4 mb-10 w-32 mx-auto border-green-600'></hr>
            <ImageGallery items={images} />

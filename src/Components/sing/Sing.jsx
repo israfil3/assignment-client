@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaBeer, FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
+import {FaGithub, FaGoogle } from 'react-icons/fa';
 import './sing.css'
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';

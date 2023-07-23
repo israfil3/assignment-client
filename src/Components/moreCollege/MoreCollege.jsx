@@ -9,7 +9,7 @@ const MoreCollege = () => {
         .then(data => setCollage(data))
     },[])
     return (
-        <div className='grid grid-cols-3 gap-5 my-10'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:my-10'>
             {
                 college.map(school => <MoreSubCollege key={school._id} school={school}>
 

@@ -33,7 +33,7 @@ const MyCollege = () => {
     }
 
     return (
-        <div className='grid grid-cols-3 gap-5 my-10'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:my-10'>
            {
             myCollege.map(e => 
                 <div className="card w-96 bg-base-100 shadow-xl mx-auto">

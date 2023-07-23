@@ -35,7 +35,7 @@ const AdmissionCollage = () => {
 
       }
     return (
-        <div className='bg-green-300 py-14'>
+        <div className='bg-blue-100 py-14'>
            <form onSubmit={handleSubmit}  action="">
                <div className='grid grid-cols-2 gap-10 w-[60%] mx-auto t'>
                    <input type="text" name='college' value={addCollage.college_name}/>

@@ -12,10 +12,10 @@ const Rating1 = () => {
     return (
         <div className='my-10'>
         <h1 className='text-2xl text-center my-10'>College Review</h1>
-        <div className='grid grid-cols-3 gap-5 w-[70%] mx-auto'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:w-[70%] mx-auto'>
             {
                 rating.map(e => 
-                    <div className="border p-10 mx-auto">
+                    <div className="border p-10 mx-auto shadow-lg rounded">
                        <h1 className='text-[20px] mb-5'>{e.college}</h1>
                        <h2 className='my-5'>{e.text}</h2>
                        <Rating style={{ maxWidth: 100 }}value={e.option}readOnly/>

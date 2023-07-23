@@ -9,39 +9,52 @@ const SubCollage = ({col}) => {
         console.log(event)
     }
     return (
-        <div className="card  w-96 glass mx-auto shadow-lg">
-          <figure> <img  src={image_url} alt="Shoes" className="rounded-xl w-96 h-72" /></figure>
-        <div className='card-body'>
-        <h2 className="card-title">Name:{college_name}</h2>
-                <p>Admission Dates: {admission_dates}</p>
-                <h1 className='text-[18px]'>event name and date</h1>
-                <hr  className='border-red-400 border-2  w-20'/>
-                {
-                    events.map(e => 
-                        <div className="grid grid-cols-2">
-                            <div className="">
-                            <h1>{e.event_name}:</h1>
+
+        <>
+                <div className="card  w-96 glass mx-auto shadow-lg">
+                <figure> <img  src={image_url} alt="Shoes" className="rounded-xl w-96 h-72" /></figure>
+                <div className='card-body'>
+                <h2 className="card-title">Name:{college_name}</h2>
+                        <p>Admission Dates: {admission_dates}</p>
+                        <h1 className='text-[18px]'>event name and date</h1>
+                        <hr  className='border-red-400 border-2  w-20'/>
+                        {
+                            events.map(e => 
+                                <div className="grid grid-cols-2">
+                                    <div className="">
+                                    <h1>{e.event_name}:</h1>
+                                    </div>
+                                    <div className="">
+                                        {e.event_date}
+                                    </div>
+                                </div>
+                            )
+                        }
+                        <h1>{research_history}</h1>
+                        <h1 className='bold'>Sports</h1>
+                        <hr  className='border-red-400 border-2 w-20'/>
+                        {
+                            sports.map(e => <div>
+                                <h1>{e.sport_name}</h1> 
                             </div>
-                            <div className="">
-                                {e.event_date}
-                            </div>
-                        </div>
-                    )
-                }
-                <h1>{research_history}</h1>
-                <h1 className='bold'>Sports</h1>
-                <hr  className='border-red-400 border-2 w-20'/>
-                {
-                    sports.map(e => <div>
-                        <h1>{e.sport_name}</h1> 
-                    </div>
-                        )
-                }
-        <div className="card-actions justify-center">
-            <Link to={`/details/${col?._id}`} className="btn btn-outline btn-secondary">Details</Link>
-        </div>
-        </div>
-        </div> 
+                                )
+                        }
+                <div className="card-actions justify-center">
+                    <Link to={`/details/${col?._id}`} className="btn btn-outline btn-secondary">Details</Link>
+                </div>
+                </div>
+                </div> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </>
 
     );
 };

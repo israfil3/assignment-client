@@ -10,11 +10,13 @@ const Collage = () => {
     } ,[])
 
     return (
-        <div className='grid grid-cols-3'>
+      <>
+              <div className='grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
             {
                 collage.map(col => <SubCollage key={col._id} col={col}></SubCollage> )    
             }
         </div>
+      </>
     );
 };
 

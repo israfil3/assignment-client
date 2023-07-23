@@ -10,7 +10,7 @@ const Admission = () => {
             } ,[])
             console.log(collageName)
     return (
-        <div className='grid grid-cols-2 p-10 gap-7'>
+        <div className='grid lg:grid-cols-2 lg:p-10 gap-7 border shadow-lg'>
             {
                 collageName.map(e=> <h1 className='text-[20px] border'><Link to={`/collegeID/${e?._id}`}>{e.college_name}</Link></h1>
                     )
