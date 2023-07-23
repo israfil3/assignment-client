@@ -16,7 +16,7 @@ const Home = () => {
                         <Link className='btn btn-outline'>Home</Link>
                         <Link to={'college'} className='btn btn-outline btn-success'>Colleges</Link>
                         <Link to={'admission'} className='btn btn-outline btn-success'>Admission</Link>
-                        <Link className='btn btn-outline btn-success'>My College</Link>
+                        <Link to={'myCollege'} className='btn btn-outline btn-success'>My College</Link>
                     </div>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -26,7 +26,7 @@ const Home = () => {
                         <Link  className='btn btn-outline btn-error'>Home</Link>
                         <Link to={'college'} className='btn btn-outline btn-success'>Colleges</Link>
                         <Link  to={'admission'} className='btn btn-outline btn-success'>Admission</Link>
-                        <Link className='btn btn-outline btn-success'>My College</Link>
+                        <Link to={'myCollege'} className='btn btn-outline btn-success'>My College</Link>
                     </div>
                 </div>
                 <div className="navbar-end">

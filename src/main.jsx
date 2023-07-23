@@ -12,6 +12,7 @@ import MoreCollege from './Components/moreCollege/MoreCollege.jsx';
 import SubCollageTag from './Components/subCollageTag/SubCollageTag.jsx';
 import Admission from './Components/Admission/Admission.jsx';
 import AdmissionCollage from './Components/AdmissionCollage/AdmissionCollage.jsx';
+import MyCollege from './Components/myColege/MyCollege.jsx';
 
 
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path:'/collegeID/:id',
         element:<AdmissionCollage></AdmissionCollage>,
         loader:({params}) => fetch(`http://localhost:5000/subCollege/${params.id}`)
+      },
+      {
+        path:'myCollege',
+        element:<MyCollege></MyCollege>
       }
     ]
   },
