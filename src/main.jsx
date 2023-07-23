@@ -13,6 +13,10 @@ import SubCollageTag from './Components/subCollageTag/SubCollageTag.jsx';
 import Admission from './Components/Admission/Admission.jsx';
 import AdmissionCollage from './Components/AdmissionCollage/AdmissionCollage.jsx';
 import MyCollege from './Components/myColege/MyCollege.jsx';
+import Sing from './Components/sing/Sing.jsx';
+import Login from './Components/login/Login.jsx';
+import AuthProvider from './Components/Provider/AuthProvider.jsx';
+import PrivateRoute from '../PrivateRoute.jsx';
 
 
 
@@ -28,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/details/:id',
-        element:<CollageDetails></CollageDetails>,
+        element:<PrivateRoute><CollageDetails></CollageDetails></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/college/${params.id}`) 
       },
       {
@@ -52,13 +56,23 @@ const router = createBrowserRouter([
       {
         path:'myCollege',
         element:<MyCollege></MyCollege>
+      },
+      {
+        path:'sing',
+        element:<Sing></Sing>
+      },
+      {
+        path:'login',
+        element:<Login></Login>
       }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-   <RouterProvider router={router} />
-  </React.StrictMode>,
+ <AuthProvider>
+        <React.StrictMode>
+          <RouterProvider router={router} />
+        </React.StrictMode>,
+ </AuthProvider>
 )

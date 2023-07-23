@@ -30,7 +30,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-outline btn-success">Button</a>
+                    <Link to={'sing'} className="btn btn-outline btn-success">Sing Up</Link>
                 </div>
             </div>
         </>
