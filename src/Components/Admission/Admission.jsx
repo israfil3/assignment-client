@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Admission = () => {
     const [collageName, setCollageName] = useState([]);
             useEffect(()=> {
-                fetch(`http://localhost:5000/subCollege`)
+                fetch(`https://myserver-israfil3.vercel.app/subCollege`)
                 .then(res => res.json())
                 .then(data => setCollageName(data))
             } ,[])

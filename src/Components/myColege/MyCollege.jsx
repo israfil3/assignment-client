@@ -6,7 +6,7 @@ const MyCollege = () => {
     const [myCollege,setMyCollege] = useState([]);
     const {user} = useContext(AuthContext);
     useEffect(()=>{
-        fetch(`http://localhost:5000/admission`)
+        fetch(`https://myserver-israfil3.vercel.app/admission`)
         .then(res => res.json())
         .then(data => setMyCollege(data))
     },[]);
@@ -28,7 +28,7 @@ const MyCollege = () => {
               return
         }
 
-        fetch(`http://localhost:5000/rating`,{
+        fetch(`https://myserver-israfil3.vercel.app/rating`,{
             method:'POST',
             headers: {
                 'content-type' : 'application/json'

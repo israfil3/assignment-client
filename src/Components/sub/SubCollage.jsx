@@ -16,7 +16,7 @@ const SubCollage = ({col}) => {
                         <hr  className='border-red-400 border-2  w-20'/>
                         {
                             events.map(e => 
-                                <div className="grid grid-cols-2">
+                                <div key={e._id} className="grid grid-cols-2">
                                     <div className="">
                                     <h1>{e.event_name}:</h1>
                                     </div>

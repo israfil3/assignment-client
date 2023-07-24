@@ -4,7 +4,7 @@ import MoreSubCollege from '../moreSubCollege/MoreSubCollege';
 const MoreCollege = () => {
     const[college, setCollage] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/subCollege`)
+        fetch(`https://myserver-israfil3.vercel.app/subCollege`)
         .then(res => res.json())
         .then(data => setCollage(data))
     },[])

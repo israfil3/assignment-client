@@ -5,7 +5,7 @@ const Collage = () => {
     const [collage, setCollage] = useState([]);
     const [search, setSearch] = useState('')
     useEffect(()=>{
-        fetch('http://localhost:5000/college')
+        fetch('https://myserver-israfil3.vercel.app/college')
         .then(res => res.json())
         .then(data => setCollage(data))
     } ,[])

@@ -5,7 +5,7 @@ import '@smastrom/react-rating/style.css'
 const Rating1 = () => {
     const [rating,setRating] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/rating`)
+        fetch(`https://myserver-israfil3.vercel.app/rating`)
         .then(res=> res.json())
         .then(data => setRating(data))
     },[])

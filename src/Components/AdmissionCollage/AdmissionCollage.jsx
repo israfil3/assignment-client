@@ -19,7 +19,7 @@ const AdmissionCollage = () => {
             const url = form.url.value;
             const addAdmission = {name,option,email,number,address,date,url,college}
 
-            fetch('http://localhost:5000/admission',{
+            fetch('https://myserver-israfil3.vercel.app/admission',{
                 method:'POST',
                 headers: {
                     'content-type' : 'application/json'

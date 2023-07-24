@@ -4,7 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 const SubCollageTag = () => {
     const subTag = useLoaderData();
     const {admission_date,college_image,college_name,college_rating,events,research_projects,sports_facilities} = subTag
-    console.log(subTag)
     return (
         <div className='mx-auto w-[70%] border text-center my-10'>
            <div className="">

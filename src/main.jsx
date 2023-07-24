@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         element:<PrivateRoute><CollageDetails></CollageDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/college/${params.id}`) 
+        loader:({params})=>fetch(`https://myserver-israfil3.vercel.app/college/${params.id}`) 
       },
       {
         path:'college',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path:'/subCollege/:id',
         element:<PrivateRoute><SubCollageTag></SubCollageTag>,</PrivateRoute>,
-        loader:({params})=>  fetch(`http://localhost:5000/subCollege/${params.id}`)
+        loader:({params})=>  fetch(`https://myserver-israfil3.vercel.app/subCollege/${params.id}`)
       },
       {
         path:'admission',
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       {
         path:'/collegeID/:id',
         element:<AdmissionCollage></AdmissionCollage>,
-        loader:({params}) => fetch(`http://localhost:5000/subCollege/${params.id}`)
+        loader:({params}) => fetch(`https://myserver-israfil3.vercel.app/subCollege/${params.id}`)
       },
       {
         path:'myCollege',
