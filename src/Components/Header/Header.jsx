@@ -1,12 +1,11 @@
 import React from 'react';
-import Home from '../Home/Home';
-import Search from '../Search/Search';
 import Collage from '../Collage/Collage';
 import ImgGallery from '../Img-gallery/ImgGallery';
 import LinkTag from '../lLinkTag/LinkTag';
 import Rating1 from '../Rating/Rating1';
 import logo from './front-view-educational-objects-composition.jpg'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Degree from '../Digree/Degree';
 
 const Header = () => {
     const [text] = useTypewriter({
@@ -25,10 +24,10 @@ const Header = () => {
                 </div>
             </div>
         </div>
+        <div className="">
+            <Degree></Degree>
+        </div>
         <div>
-          <div className="">
-                <Search></Search>
-            </div>
             <div className="">
                 <Collage></Collage>
             </div>

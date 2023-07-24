@@ -1,0 +1,5 @@
+.k:hover {
+    background: rgba(0, 128, 0, 0.427);
+    rotate: 10deg;
+    transition: 1s;
+}

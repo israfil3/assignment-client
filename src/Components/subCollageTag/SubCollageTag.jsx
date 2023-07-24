@@ -19,7 +19,7 @@ const SubCollageTag = () => {
                     <div className="">
                     <h2 className='text-[20px]'>Events</h2>
                         {
-                            events.map(e => <div className="">
+                            events.map(e  => <div key={e._id} className="">
                                 <li>{e}</li>
                             </div>)
                         }
@@ -28,7 +28,7 @@ const SubCollageTag = () => {
                <div className="">
                 <h1 className='text-[20px]'>Sports</h1>
                     {
-                        sports_facilities.map(e => <div className="">
+                        sports_facilities.map(e => <div key={e._id} className="">
                             <li>{e}</li>
                         </div>
                             )

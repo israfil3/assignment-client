@@ -17,6 +17,8 @@ import Sing from './Components/sing/Sing.jsx';
 import Login from './Components/login/Login.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import PrivateRoute from '../PrivateRoute.jsx';
+import Error from './Components/Erorr/Error.jsx';
+import UserDetils from './Components/user/UserDetils.jsx';
 
 
 
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
@@ -64,6 +67,10 @@ const router = createBrowserRouter([
       {
         path:'login',
         element:<Login></Login>
+      },
+      {
+        path: 'userD',
+        element:<UserDetils></UserDetils>
       }
     ]
   },

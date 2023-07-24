@@ -15,7 +15,7 @@ const Rating1 = () => {
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:w-[70%] mx-auto'>
             {
                 rating.map(e => 
-                    <div className="border p-10 mx-auto shadow-lg rounded">
+                    <div key={e._id} className="border p-10 mx-auto shadow-lg rounded">
                        <h1 className='text-[20px] mb-5'>{e.college}</h1>
                        <h2 className='my-5'>{e.text}</h2>
                        <Rating style={{ maxWidth: 100 }}value={e.option}readOnly/>

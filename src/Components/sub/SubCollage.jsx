@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 
 const SubCollage = ({col}) => {
     const {college_name,image_url,admission_dates,events,research_history,sports, _id} = col
-    console.log(col)
-    const handleSubmit = (event) => {
-        console.log(event)
-    }
     return (
 
         <>

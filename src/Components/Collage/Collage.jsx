@@ -3,6 +3,7 @@ import SubCollage from '../sub/SubCollage';
 
 const Collage = () => {
     const [collage, setCollage] = useState([]);
+    const [search, setSearch] = useState('')
     useEffect(()=>{
         fetch('http://localhost:5000/college')
         .then(res => res.json())
@@ -11,9 +12,14 @@ const Collage = () => {
 
     return (
       <>
+       <div className='text-center my-10'>
+            <input onChange={(e)=>setSearch(e.target.value)} className='py-3 px-16 w-96 mx-auto rounded border'  type="search" name="search" id="search" placeholder='Search  your college'/>
+        </div>
               <div className='grid gap-5 lg:grid-cols-3 md:grid-cols-2'>
             {
-                collage.map(col => <SubCollage key={col._id} col={col}></SubCollage> )    
+                collage.filter((col=>{
+                  return search.toLocaleLowerCase()=== '' ? col:(col.college_name.toLocaleLowerCase()).includes(search)
+                })).map(col => <SubCollage key={col._id} col={col}></SubCollage> )    
             }
         </div>
       </>
