@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/subCollege/:id',
-        element:<SubCollageTag></SubCollageTag>,
+        element:<PrivateRoute><SubCollageTag></SubCollageTag>,</PrivateRoute>,
         loader:({params})=>  fetch(`http://localhost:5000/subCollege/${params.id}`)
       },
       {

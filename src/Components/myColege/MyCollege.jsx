@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const MyCollege = () => {
     const [myCollege,setMyCollege] = useState([]);
+    const {user} = useContext(AuthContext);
     useEffect(()=>{
         fetch(`http://localhost:5000/admission`)
         .then(res => res.json())
@@ -16,6 +19,14 @@ const MyCollege = () => {
         const college =form.college.value;
         console.log(text,option);
         const ratingData = {text,option,college}
+        if(!user){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Login First',
+              })
+              return
+        }
 
         fetch(`http://localhost:5000/rating`,{
             method:'POST',
@@ -27,7 +38,13 @@ const MyCollege = () => {
         .then(res => res.json())
         .then(data => {
             const user = data.user;
-            alert('done')
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Your raview has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              })
             event.target.reset();
         })
     }
